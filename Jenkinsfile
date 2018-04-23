@@ -1,6 +1,8 @@
 pipeline {
     agent any
 
+
+    def mvnHome
     stages {
 
         stage('Cleanup') {
@@ -31,7 +33,7 @@ pipeline {
 
         stage('Build Maven') {
             steps {
-                def mvnHome = tool 'M3'
+                mvnHome = tool 'maven353'
                 if (isUnix()) {
                     sh "'${mvnHome}/bin/mvn' clean test"
                 }
