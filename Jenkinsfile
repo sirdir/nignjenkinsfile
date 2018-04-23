@@ -35,7 +35,7 @@ pipeline {
             steps {
                 mvnHome = tool 'maven353'
                 if (isUnix()) {
-                    sh "'${mvnHome}/bin/mvn' clean test"
+                    sh "'/home/kubai/soft/apache-maven-3.5.2/bin/mvn' clean test"
                 }
             }
         }
