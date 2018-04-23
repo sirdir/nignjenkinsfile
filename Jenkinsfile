@@ -7,6 +7,7 @@ pipeline {
             steps {
                 sh 'echo $env.JIRA_ISSUE_KEY'
                 sh 'echo ${env.JIRA_ISSUE_KEY}'
+                sh 'echo ${env.JOB_NAME}'
             }
         }
         stage('Cleanup 1') {
