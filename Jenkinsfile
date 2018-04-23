@@ -5,8 +5,8 @@ pipeline {
 
         stage('sys env') {
             steps {
-                sh 'echo $JIRA_ISSUE_KEY'
-                sh 'echo ${JIRA_ISSUE_KEY}'
+                sh 'echo $env.JIRA_ISSUE_KEY'
+                sh 'echo ${env.JIRA_ISSUE_KEY}'
             }
         }
         stage('Cleanup 1') {
