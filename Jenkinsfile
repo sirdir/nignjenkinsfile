@@ -5,8 +5,10 @@ pipeline {
 
         stage('sys env') {
             steps {
-                sh "echo ${env.JOB_NAME}"
-                sh "echo ${env}"
+                sh 'printenv'
+
+//                sh "echo ${env.JOB_NAME}"
+//                sh "echo ${env}"
             }
         }
         stage('Cleanup 1') {
