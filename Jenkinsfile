@@ -5,7 +5,6 @@ pipeline {
 
         stage('sys env') {
             steps {
-                sh 'echo ${env.JIRA_ISSUE_KEY}'
                 sh 'echo ${env.JOB_NAME}'
             }
         }
