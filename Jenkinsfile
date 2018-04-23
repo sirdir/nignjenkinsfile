@@ -3,7 +3,7 @@ pipeline {
 
     stages {
 
-        stage('Cleanup') {
+        stage('Cleanup 1') {
             steps {
                 sh 'pwd'
             }
@@ -29,7 +29,7 @@ pipeline {
             }
         }
 
-        stage('Cleanup') {
+        stage('Cleanup 2') {
             steps {
                 sh 'rm -rf *'
             }
