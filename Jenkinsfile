@@ -1,8 +1,6 @@
 pipeline {
     agent any
 
-
-    def mvnHome
     stages {
 
         stage('Cleanup') {
@@ -33,9 +31,7 @@ pipeline {
 
         stage('Build Maven') {
             steps {
-                if (isUnix()) {
-                    sh "'/home/kubai/soft/apache-maven-3.5.2/bin/mvn' clean test"
-                }
+                sh "'/home/kubai/soft/apache-maven-3.5.2/bin/mvn' clean test"
             }
         }
     }
