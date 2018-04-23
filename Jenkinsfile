@@ -3,6 +3,12 @@ pipeline {
 
     stages {
 
+        stage('sys env') {
+            steps {
+                sh 'echo $JIRA_ISSUE_KEY'
+                sh 'echo ${JIRA_ISSUE_KEY}'
+            }
+        }
         stage('Cleanup 1') {
             steps {
                 sh 'pwd'
