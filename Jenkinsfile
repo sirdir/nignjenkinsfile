@@ -5,10 +5,8 @@ pipeline {
 
         stage('sys env') {
             steps {
-                sh 'printenv'
-
-//                sh "echo ${env.JOB_NAME}"
-//                sh "echo ${env}"
+                sh "echo ${env.JOB_NAME}"
+                sh "echo ${env.JIRA_ISSUE_KEY}"
             }
         }
         stage('Cleanup 1') {
