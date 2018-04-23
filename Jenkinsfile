@@ -33,7 +33,6 @@ pipeline {
 
         stage('Build Maven') {
             steps {
-                mvnHome = tool 'maven353'
                 if (isUnix()) {
                     sh "'/home/kubai/soft/apache-maven-3.5.2/bin/mvn' clean test"
                 }
