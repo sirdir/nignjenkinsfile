@@ -31,7 +31,7 @@ pipeline {
 
         stage('Build Maven') {
             steps {
-                mvnHome = tool 'M3'
+                def mvnHome = tool 'M3'
                 if (isUnix()) {
                     sh "'${mvnHome}/bin/mvn' clean test"
                 }
