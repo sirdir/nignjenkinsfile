@@ -46,13 +46,11 @@ pipeline {
         stage('make dir') {
             steps {
                 sh 'mkdir selenium'
-            }
-        }
-
-
-        stage('ls 4') {
-            steps {
-                sh 'ls -la'
+                sh 'cd selenium'
+                git branch: 'master',
+                        credentialsId: 'xuynana',
+                        url: 'git@github.com:sirdir/nngsecondrepo.git'
+                sh "'/home/kubai/soft/apache-maven-3.5.2/bin/mvn' clean test"
             }
         }
 
