@@ -5,7 +5,7 @@ pipeline {
 
         stage('sys env') {
             steps {
-                sh 'echo ${env.JOB_NAME}'
+                sh "echo ${env.JOB_NAME}"
             }
         }
         stage('Cleanup 1') {
